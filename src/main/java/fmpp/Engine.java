@@ -901,7 +901,7 @@ public class Engine {
                                 && pmode == Engine.PMODE_COPY))) {
                 long dfl = df.lastModified();
                 long sfl = sf.lastModified();
-                if (df.exists() && dfl > 0 && sfl > 0 && dfl == sfl) {
+                if (df.exists() && dfl > 0 && sfl > 0 && dfl >= sfl) {
                     progListeners.notifyProgressEvent(
                             this,
                             ProgressListener.EVENT_SOURCE_NOT_MODIFIED,
